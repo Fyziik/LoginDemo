@@ -20,11 +20,16 @@ public class MemberRepository implements IMemberRepository {
 
     @Override
     public boolean create(Member m) {
-        return false;
+        return this.members.add(m);
     }
 
     @Override
     public Member read(String email) {
+        for (Member member : members) {
+            if (member.getEmail().equals(email)) {
+                return member;
+            }
+        }
         return null;
     }
 
