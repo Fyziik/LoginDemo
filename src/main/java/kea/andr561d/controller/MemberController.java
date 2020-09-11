@@ -2,7 +2,6 @@ package kea.andr561d.controller;
 
 import kea.andr561d.model.Member;
 import kea.andr561d.repository.IMemberRepository;
-import kea.andr561d.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -47,5 +46,7 @@ public class MemberController {
         session.removeAttribute("isLoggedIn");
         return "index";
     }
+
+
 
 }
